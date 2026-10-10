@@ -1,37 +1,24 @@
-function App() {
-return "Hello, Welcome to My First React App!";
+// @ts-ignore React and its types must be supplied by the host app.
+import React from 'react';function App() {
+function add(number1: number, number2: number): number {
+return number1 + number2;
 }
 
+let sum: number = add(2, 5);
+
+try {
+let testValue: number = Number("abc");
+if (isNaN(testValue)) {
+throw new Error("Error - NaN (Not a Number)");
+}
+} catch (error) {
+console.log("Caught an error:", error);
+}
+
+return React.createElement(
+React.Fragment,
+null,
+React.createElement('h1', null, 'Course 7')
+);
+}
 export default App;
-// 1. Boolean variable
-let isStudent: boolean = true;
-
-// 2. String variable
-const studentName: string = "Obida";
-
-// 3. Number variable
-let studentAge: number = 17;
-
-// 4. Colour array
-let colours: string[] = ["red", "blue", "green"];
-
-// 5. Person class
-class Person {
-name: string;
-age: number;
-
-constructor(name: string, age: number) {
-this.name = name;
-this.age = age;
-}
-}
-
-// 6. Object of type Person
-let person1 = new Person("Obida", 17);
-
-// 7. Table (Array of type Person)
-let people: Person[] = [
-new Person("Rob", 39),
-new Person("Jane", 28),
-new Person("Sam", 42)
-];
