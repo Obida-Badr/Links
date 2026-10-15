@@ -25,10 +25,11 @@ person.isTeacher = Boolean(Number(row.isTeacher));
 people.push(person);
 }
 
-// Search & Filter functions shown by Rob
+// Search & Filter functions
 let findRob = people.find((p) => p.name === "Rob");
 let teachers = people.filter((p) => Boolean(Number(p.isTeacher)));
 let oNames = people.filter((p) => p.name.toLowerCase().includes("o"));
+
 // React State for Dropdown
 const [selectedName, setSelectedName] = useState<string>("Rob");
 
@@ -75,10 +76,7 @@ return (
 <span>{oNames.length}</span>
 </div>
 </div>
-<div>
-<label>Number of names with the letter O: </label>
-<span>{oNames.length}</span>
-</div>
+
 {/* Dropdown Menu */}
 <div style={{ marginBottom: '10px' }}>
 <label>People: </label>
