@@ -41,6 +41,9 @@ const selectedPerson = people.find((p) => p.name === selectedName);
 
 return (
 <div style={{ padding: '20px', fontFamily: 'sans-serif' }}>
+<div style={{ textAlign: 'center', marginBottom: '20px' }}>
+<h1 style={{ color: 'gold' }}>People Explorer</h1>
+</div>
 {/* Main Data Table */}
 <table border={1} cellPadding={8} style={{ borderCollapse: 'collapse', marginBottom: '20px' }}>
 <thead>
